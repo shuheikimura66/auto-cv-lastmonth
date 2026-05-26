@@ -141,7 +141,7 @@ def main():
         # --- 3. 「先月」ボタンをクリック ---
         print("「先月」ボタンを選択します...")
         try:
-            current_month_btn = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".current_month")))
+            current_month_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "//button[text()='先月']")))
             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", current_month_btn)
             time.sleep(1)
             current_month_btn.click()
